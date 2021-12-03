@@ -1,0 +1,64 @@
+1.Listázd ki az utasoknak a nevét, email címét és azt a helyet ahova utazik.
+Lekérdezés szövegesen:
+SELECT utas.név, utas.email, hova.hely
+From utas JOIN hova On utas.hovaid=hova.id;
+
+
+2.Listázd ki a sofőröknek a nevét, email címét és azt a helyet ahova utazik.
+Lekérdezés szövegesen:
+SELECT sofőr.név, sofőr.email, indulás.hely
+From sofőr JOIN indulás On sofőr.indulásid=indulás.id;
+
+
+3.Listázd ki, hogy az egyes sofőrökhöz milyen típusú autó tartozik.
+Lekérdezés szövegesen:
+SELECT sofőr.név, autó.típus
+From sofőr JOIN autó On sofőr.autóid=autó.id;
+
+
+
+4.Rakd ABC sorrendbe a sofőröket. A nevet, emailt, telefonszámot írasd ki.
+Lekérdezés szövegesen:
+SELECT név, email, telefonszám
+FROM sofőr
+ORDER BY név;
+
+
+
+5.Listázd ki az autókat évjárat szerint csökkenő sorrendbe. Írasd ki az évjáratát, típusát, rendszámát.
+Lekérdezés szövegesen:
+SELECT évjárat, típus, rendszám
+FROM autó
+ORDER BY évjárat DESC,típus;
+
+
+
+6.Listázd ki, hogy melyik utashoz melyik sofőr tartozik. Irasd ki az utas nevét, sofőr nevét és a sofőrnek az autójának a rendszámát.
+Lekérdezés szövegesen:
+SELECT utas.név, sofőr.név, autó.rendszám
+FROM utas
+JOIN sofőr ON utas.id = sofőr.utasid
+JOIN autó ON sofőr.autóid = autó.id;
+
+
+7.Irasd ki a legfiatalabb autó(k) típusát és színét.
+Lekérdezés szövegesen:
+SELECT típus, szín
+FROM autó WHERE évjárat IN (SELECT MAX(évjárat) FROM autó);
+
+
+8.Irasd ki hány darab autó van az autó táblában.
+SELECT 
+COUNT(id)
+FROM autó;
+
+
+9.Irasd ki a „B” betűvel kezdődő utasoknak a nevét.
+Lekérdezés szövegesen:
+	SELECT név FROM utas WHERE név LIKE 'B%';
+
+
+10.Listázd ki a sofőr táblában az olyan utasokat, akiknek „gmail” email fiókjuk van.
+Lekérdezés szövegesen:
+	SELECT email FROM sofőr WHERE email LIKE '%@gmail.com%';
+

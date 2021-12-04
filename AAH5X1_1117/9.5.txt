@@ -1,0 +1,27 @@
+CREATE TABLE GYARTO(
+    adoszam INT PRIMARY KEY, 
+    nev CHAR(30), 
+    telephely CHAR(50));
+    
+CREATE TABLE TERMEK(
+    tkod INT PRIMARY KEY, 
+    nev CHAR(30), 
+    ear INT CHECK(ear>0), 
+    gyarto INT REFERENCES GYARTO);
+
+INSERT INTO GYARTO VALUES(11111111, "lidl", 1243);
+INSERT INTO GYARTO VALUES(22222222, "tesco", 6483);
+INSERT INTO GYARTO VALUES(33333333, "mediamarkt", 2453);
+INSERT INTO GYARTO VALUES(44444444, "emag", 6438);
+
+
+INSERT INTO TERMEK VALUES(0, "gereblye", 5000, "szerszámok");
+INSERT INTO TERMEK VALUES(1, "egér", 2000, "elektronika");
+INSERT INTO TERMEK VALUES(2, "kés", 3000, "szerszámok");
+INSERT INTO TERMEK VALUES(3, "fúró", 15000, "szerszámok");
+INSERT INTO TERMEK VALUES(4, "monitor", 10000, "elektronika");
+
+SELECT nev
+FROM termek WHERE ear IN(SELECT MAx(ear) FROM termek);
+SELECT gyarto.nev
+FROM gyarto WHERE ear IN(SELECT MAx(ear) FROM termek);

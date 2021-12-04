@@ -1,0 +1,38 @@
+CREATE TABLE TANFOLYAM(
+    tkód INT, 
+    ár INT, 
+    tipus CHAR(30), 
+    megnevezés CHAR(30), 
+    PRIMARY KEY(tkód));
+    
+CREATE TABLE RESZTVEVO(
+    tajszám INT, 
+    név CHAR(30), 
+    lakcím CHAR(40), 
+    PRIMARY KEY(tajszám));
+    
+CREATE TABLE BEFIZETES(
+    tanfolyamok INT, 
+    resztvevok INT, 
+    befizetes INT);
+
+insert into tanfolyam values(0,34000,"középiskola","magyar");
+insert into tanfolyam values(1,45000,"egyetem","lineáris algebra");
+insert into tanfolyam values(2,67000,"általános","nyelvtan");
+insert into tanfolyam values(3,910000,"egyetem","operációs rendszerek");
+
+insert into resztvevo values(149828927, "Nagy Endre", NULL);
+insert into resztvevo values(432432494, "Kovács István", "Budapest");
+insert into resztvevo values(783246723, "Kis Katalin", "Tiszaújváros");
+insert into resztvevo values(328468329, "Fazekas Rebeka", NULL);
+
+
+insert into befizetes values(3,347254756,10000); 
+insert into befizetes values(2,478325478,2000); 
+insert into befizetes values(0,365123462,12300); 
+insert into befizetes values(1,573243227,34000); 
+insert into befizetes values(2,765465727,1500);
+
+SELECT COUNT(tipus) FROM tanfolyam;
+SELECT tanfolyam.tkod
+ COUNT(tanfolyamok) FROM befizetes JOIN tanfolyam;

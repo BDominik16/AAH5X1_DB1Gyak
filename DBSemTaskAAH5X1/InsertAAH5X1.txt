@@ -1,0 +1,90 @@
+Honnan tábla feltöltése:
+INSERT INTO honnan(id, dátum, óra, perc, hely) VALUES(1, '2021.12.14', 14, 00, "Tokaj");  
+INSERT INTO honnan(id, dátum, óra, perc, hely) VALUES(2, '2021.12.22', 17, 30, "Tótkomlós");   
+INSERT INTO honnan(id, dátum, óra, perc, hely) VALUES(3, '2021.12.26', 15, 45, "Túrkeve");   
+INSERT INTO honnan(id, dátum, óra, perc, hely) VALUES(4, '2021.12.21', 15, 45, "Újfehértó");  
+INSERT INTO honnan(id, dátum, óra, perc, hely) VALUES(5, '2021.12.22', 18, 00, "Zalakaros");   
+INSERT INTO honnan(id, dátum, óra, perc, hely) VALUES(6, '2021.12.12', 15, 00, "Vác");   
+INSERT INTO honnan(id, dátum, óra, perc, hely) VALUES(7, '2021.12.27', 15, 15, "Tiszalök");  
+INSERT INTO honnan(id, dátum, óra, perc, hely) VALUES(8, '2021.12.22', 13, 45, "Tiszafüred");   
+INSERT INTO honnan(id, dátum, óra, perc, hely) VALUES(9, '2021.12.22', 13, 45, "Tab");  
+INSERT INTO honnan(id, dátum, óra, perc, hely) VALUES(10, '2021.12.11', 15, 30, "Tata");
+
+Hova:
+INSERT INTO hova(id, hely) VALUES(1, "Balatonalmádi"); 
+INSERT INTO hova(id, hely) VALUES(2, "Csongrád"); 
+INSERT INTO hova(id, hely) VALUES(3, "Derecske");
+INSERT INTO hova(id, hely) VALUES(4, "Gyula");
+INSERT INTO hova(id, hely) VALUES(5, "Keszthely");  
+INSERT INTO hova(id, hely) VALUES(6, "Monor");
+INSERT INTO hova(id, hely) VALUES(7, "Nyírbátor");
+INSERT INTO hova(id, hely) VALUES(8, "Nagykanizsa");  
+INSERT INTO hova(id, hely) VALUES(9, "Siófok");
+INSERT INTO hova(id, hely) VALUES(10, "Tapolca");
+
+
+Indulás:
+INSERT INTO indulás(dátum, óra, perc, id, hely) VALUES('2021.12.21', 15, 45, 1, "Újfehértó");
+INSERT INTO indulás(dátum, óra, perc, id, hely) VALUES('2021.12.14', 14, 00, 2, "Tokaj");
+INSERT INTO indulás(dátum, óra, perc, id, hely) VALUES('2021.12.27', 15, 00, 3, "Tiszalök");
+INSERT INTO indulás(dátum, óra, perc, id, hely) VALUES('2021.12.11', 15, 30, 4, "Tata");
+INSERT INTO indulás(dátum, óra, perc, id, hely) VALUES('2021.12.21', 15, 45, 5, "Tiszaújváros");
+INSERT INTO indulás(dátum, óra, perc, id, hely) VALUES('2021.12.22', 13, 45, 6, "Tab");
+INSERT INTO indulás(dátum, óra, perc, id, hely) VALUES('2021.12.12', 15, 00, 7, "Vác");
+INSERT INTO indulás(dátum, óra, perc, id, hely) VALUES('2021.12.22', 17, 30, 8, "Tótkomlós");
+INSERT INTO indulás(dátum, óra, perc, id, hely) VALUES('2021.12.26', 15, 45, 9, "Túrkeve");
+INSERT INTO indulás(dátum, óra, perc, id, hely) VALUES('2021.12.21', 11, 15, 10, "Budapest");
+
+Érkezés:
+INSERT INTO érkezés(hely, id) VALUES("Encs", 1);
+INSERT INTO érkezés(hely, id) VALUES("Gárdony", 2);
+INSERT INTO érkezés(hely,  id) VALUES("Marcali", 3);
+INSERT INTO érkezés(hely, id) VALUES("Mezőkövesd", 4);
+INSERT INTO érkezés(hely, id) VALUES("Edelény", 5);
+INSERT INTO érkezés(hely, id) VALUES("Gyula", 6);
+INSERT INTO érkezés(hely, id) VALUES("Makó", 7); 
+INSERT INTO érkezés(hely, id) VALUES("Hajdúhadház", 8);
+INSERT INTO érkezés(hely, id) VALUES("Kazincbarcika", 9);
+INSERT INTO érkezés(hely, id) VALUES("Gödöllő", 10);
+
+
+Utas:
+INSERT INTO utas(telefonszám, email, név, honnanid, hovaid, id) VALUES ("36701492480", "pilotbmn@freemail.hu", "Balogh Ubul", 1, 1, 1);
+INSERT INTO utas(telefonszám, email, név, honnanid, hovaid, id) VALUES ("36302790436", "bolgar.dominik@gmail.com", "Bolgár Dominik", 2, 2, 2);
+INSERT INTO utas(telefonszám, email, név, honnanid, hovaid, id) VALUES ("36306747376", " nurgul78kg @gmail.com", "Kis Ödön", 3, 3, 3);
+INSERT INTO utas(telefonszám, email, név, honnanid, hovaid, id) VALUES ("36705756161", " mikeftw @gmail.com", "Jónás Olivér", 4, 4, 4);
+INSERT INTO utas(telefonszám, email, név, honnanid, hovaid, id) VALUES ("36307587637", " markravch @hotmail.hu", "Fazekas Ottó", 5, 5, 5);
+INSERT INTO utas(telefonszám, email, név, honnanid, hovaid, id) VALUES ("36707875312", " fido77 @gmail.com", "Nagy Ábel", 6, 6, 6);
+INSERT INTO utas(telefonszám, email, név, honnanid, hovaid, id) VALUES ("36308618343", " ubemojupavyja @freemail.hu", "Kovács Anna", 7, 7, 7);
+INSERT INTO utas(telefonszám, email, név, honnanid, hovaid, id) VALUES ("36302514167", " sedaeryaman @gmail.com", "Szabó Anna", 8, 8, 8);
+INSERT INTO utas(telefonszám, email, név, honnanid, hovaid, id) VALUES ("36707243452", " tgolden292 @gmail.com", "Molnár Anita", 9, 9, 9);
+INSERT INTO utas(telefonszám, email, név, honnanid, hovaid, id) VALUES ("36308731787", " kireeva2006 @hotmail.hu", "Balogh Tímea",10, 10, 10);
+
+
+Autó:
+INSERT INTO autó( szín, évjárat, típus, rendszám, id) VALUES("kék", 2014, "Skoda", "NTF-342",1);
+INSERT INTO autó( szín, évjárat, típus, rendszám, id) VALUES("szürke", 2012, "Seat", "RAP-235",2);
+INSERT INTO autó( szín, évjárat, típus, rendszám, id) VALUES("zöld", 2021, "Mercedes", "KKD-006",3);
+INSERT INTO autó( szín, évjárat, típus, rendszám, id) VALUES("fekete", 2006, "Renault", "NLE-048",4);
+INSERT INTO autó( szín, évjárat, típus, rendszám, id) VALUES("sárga", 2018, "Audi", "JNM-070",5);
+INSERT INTO autó( szín, évjárat, típus, rendszám, id) VALUES("szürke", 2011, "BMW", "JGD-777",6);
+INSERT INTO autó( szín, évjárat, típus, rendszám, id) VALUES("FEKETE", 2013, "Mazda", "FBN-987",7);
+INSERT INTO autó( szín, évjárat, típus, rendszám, id) VALUES("szürke", 2021, "Skoda", "VRS-333",8);
+INSERT INTO autó( szín, évjárat, típus, rendszám, id) VALUES("barna", 2008, "BMW", "LZN-948",9);
+INSERT INTO autó( szín, évjárat, típus, rendszám, id) VALUES("fehér", 2004, "Ford", "RAP-235",10);
+
+
+
+Sofőr:
+INSERT INTO sofőr(telefonszám,email,név,indulásid,érkezésid, id, utasid, autóid) VALUES("06302548137", "kireeva2006@gmail.com", "Szabó Károly", 1, 1, 1, 1, 1);
+INSERT INTO sofőr(telefonszám,email,név,indulásid,érkezésid, id, utasid, autóid) VALUES("06702846316", "victorhugomontalvo@freemail.hu", "Kapolcs Vilmos", 2, 2, 2, 2, 2);
+INSERT INTO sofőr(telefonszám,email,név,indulásid,érkezésid, id, utasid, autóid) VALUES("06307616512", "arnootje@hotmail.hu", "Pintér Flórián", 3, 3, 3, 3, 3);
+INSERT INTO sofőr(telefonszám,email,név,indulásid,érkezésid, id, utasid, autóid) VALUES("06307162158", "teodor@gmail.com", "Pál Valentin", 4, 4, 4, 4, 4);
+INSERT INTO sofőr(telefonszám,email,név,indulásid,érkezésid, id, utasid, autóid) VALUES("06309513547", "alinamohnach@gmail.com", "Lukács Csanád", 5, 5, 5, 5, 5);
+INSERT INTO sofőr(telefonszám,email,név,indulásid,érkezésid, id, utasid, autóid) VALUES("06709513584", "umopepisdn@gmail.com", "Szilágyi Gyula", 6, 6, 6, 6, 6);
+INSERT INTO sofőr(telefonszám,email,név,indulásid,érkezésid, id, utasid, autóid) VALUES("06308943216", "stonaige@hotmail.hu", "Lengyel Gergely", 7, 7, 7, 7, 7);
+INSERT INTO sofőr(telefonszám,email,név,indulásid,érkezésid, id, utasid, autóid) VALUES("06308913284", "sue1959@freemail.hu", "Szűts Boldizsár", 8, 8, 8, 8, 8);
+INSERT INTO sofőr(telefonszám,email,név,indulásid,érkezésid, id, utasid, autóid) VALUES("06709841651", "mustek550@gmail.com", "Csonka Dezső", 9, 9, 9, 9, 9);
+INSERT INTO sofőr(telefonszám,email,név,indulásid,érkezésid, id, utasid, autóid) VALUES("06701592174", "kaprun64@gmail.com", "Dobos Ramóna", 10, 10, 10, 10, 10);
+
+

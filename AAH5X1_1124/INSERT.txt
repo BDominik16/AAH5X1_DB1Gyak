@@ -1,0 +1,19 @@
+INSERT INTO CIM (2456, "Debrecen",'József Attila út','24');
+INSERT INTO CÍM (1276,"Miskolc",'Honvéd utca',"2");
+INSERT INTO CÍM (5437,"Pécs",'Kossuth út',"53");
+INSERT INTO CÍM (2340,"Budapest",' Kinizsi utca',"14");
+INSERT INTO CÍM (4729,"Miskolc",' Hősök utca','132');
+INSERT INTO CÍM (7292,"Debrecen",'Igazak utca', '251');
+
+INSERT INTO HALLGATO ('ZWH61K',18, 'Fazekas Miklós','BI1',' 04.06.2003',18);
+INSERT INTO HALLGATO ('AAH5X1',12, 'Bolgár Dominik','BI2',' 11.11.2000',21);
+INSERT INTO HALLGATO ('A575TE',15, 'Kiss Bence','BI3',' 24.05.1999' ,22);
+
+INSERT INTO TARGY (12, 'AAH5X1','SZK3',6,'Adatbázisrendszerek');
+INSERT INTO TARGY (15, 'A575TE','SZK3',5, 'Lineáris algebra');
+INSERT INTO TARGY (18, 'ZWH61K','SZK3',5,'Objektum Orientált Programozás');
+
+INSERT INTO OKTATÓ ('SZK3',18,'IIT','Kovács Szilveszter');
+INSERT INTO OKTATÓ ('SZK3',NULL,'IIT', 'Kovács László');
+INSERT INTO OKTATÓ ('SZK3',12,'IIT', 'Kovács Szilveszter');
+INSERT INTO OKTATÓ ('LK12',15,'IIT','Kovács Szilveszter');
